@@ -8,6 +8,7 @@ const CustomerList = ({ setSelectedCustomer }) => {
     useEffect(() => {
         axios.get('http://localhost:3001/customers')
             .then(response => setCustomers(response.data));
+        
     }, []);
 
     const handleFilterChange = (e) => {
